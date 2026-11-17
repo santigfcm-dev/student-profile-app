@@ -17,7 +17,7 @@ function createServer() {
             const html = `<!DOCTYPE html>
 <html><head><meta charset="UTF-8"><title>Student Profiles</title></head>
 <body>
-  <h1>Student Profile System</h1>
+  <h1 style="color:#11998e">Student Profile System</h1>
   <p>Total: ${students.length} · Average age: ${avgAge.toFixed(1)} · Grade A: ${gradeDistribution['A'] || 0}</p>
 <p>Server time: ${dayjs().format('YYYY-MM-DD HH:mm:ss')}</p>
   <table>
