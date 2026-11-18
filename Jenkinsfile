@@ -30,6 +30,27 @@ pipeline {
                         --restart unless-stopped \
                         student-profile-app:ci
                 '''
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                sh '''
+                    for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+                       status=$(docker inspect --format '{{.State.Health.Status}}' student-app)
+                       echo "Health check $attempt: $status"
+
+                       if [ "$status" = "healthy" ]; then
+                           exit 0
+                       fi
+
+                       sleep 5
+                    done
+
+            echo "Deployment health verification failed"
+            docker logs --tail 30 student-app
+            exit 1
+        '''
     }
 }
     }
