@@ -1,5 +1,5 @@
 const students = [
-    { id: 1, name: 'John Doe', age: 20, grade: 'A', email: 'john@school.com' },
+    { id: 1, name: 'John Doe', age: 20, grade: 'A', email: 'bad-email' },
     { id: 2, name: 'Jane Smith', age: 21, grade: 'B', email: 'jane@school.com' },
     { id: 3, name: 'Mike Johnson', age: 19, grade: 'A', email: 'mike@school.com' }, 
     { id: 4, name: 'Sarah Wilson', age: 22, grade: 'C', email: 'sarah@school.com' }
